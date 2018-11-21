@@ -1,4 +1,6 @@
-
+%{
+ガウスカーネルに対するSVMの劣勾配アルゴリズム
+%}
 
 clear all; rand('state',0); randn('state',0);
 n=200; a=linspace(0,4*pi,n/2);
