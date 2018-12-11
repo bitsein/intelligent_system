@@ -19,7 +19,7 @@ def data_set(A):
     print(A)
 
 
-def pca_analysis(A,X):
+def data_pca(A,X):
     pca = PCA()
     pca.fit(A)
     transformed = pca.fit_transform(A)
@@ -98,7 +98,7 @@ def main():
     
     #Aにデータを生成させ、主成分分析する
     data_set(A)
-    pca_analysis(A,X)
+    data_pca(A,X)
 
     #Uの変化が小さくなるまでUとCの更新を繰り返す
     epsilon = 1
