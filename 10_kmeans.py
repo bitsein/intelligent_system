@@ -47,7 +47,6 @@ def update_C(C,U,X):
 def update_u(C,U,X):
     s = np.zeros((CLASS,2))
     c = np.zeros((CLASS,1))
-    newU = np.zeros((CLASS,2))
     epsilon = 0
     for i in range(ALL_SIZE):
         for j in range(CLASS):
