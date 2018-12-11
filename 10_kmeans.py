@@ -57,9 +57,9 @@ def update_u(C,U,X):
 
     for i in range(CLASS):
         epsilon = epsilon + np.linalg.norm(U[i] - s[i]/c[i])
-        newU[i] = s[i]/c[i]
+        U[i] = s[i]/c[i]
     
-    return newU, epsilon
+    return epsilon
 
 
 def print_clstering(C,U,X):
@@ -104,7 +104,7 @@ def main():
     epsilon = 1
     while epsilon > 0.1:
         update_C(C,U,X)
-        U, epsilon = update_u(C,U,X)
+        epsilon = update_u(C,U,X)
         
     #結果の出力
     print_clstering(C,U,X)
