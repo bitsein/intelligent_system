@@ -44,7 +44,7 @@ def update_C(C,U,X):
         C[i] = np.argmin(N)
 
 
-def update_u(C,U,X):
+def update_U(C,U,X):
     s = np.zeros((CLASS,2))
     c = np.zeros((CLASS,1))
     epsilon = 0
@@ -103,7 +103,7 @@ def main():
     epsilon = 1
     while epsilon > 0.1:
         update_C(C,U,X)
-        epsilon = update_u(C,U,X)
+        epsilon = update_U(C,U,X)
         
     #結果の出力
     print_clstering(C,U,X)
